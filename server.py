@@ -2,7 +2,7 @@ import socket #Instructs the script to access the socket module required for net
 import secrets #Instructs the script to access the secret module required
 
 s= socket.socket(socket.AF_INET, socket.SOCK_STREAM) #Creates a socket object, AF_INET specifies IPV4 will be used and SOCK_STREAM specifies TCP will be used.
-s.bind((socket.gethostname(),4)) #Binds the socket to a public host so it can be accessed from the outside world, port 4 is used as this is an unassigned port
+s.bind((127.0.0.1,4)) #Binds the socket to a public host so it can be accessed from the outside world, port 4 is used as this is an unassigned port
 s.listen(5) #Puts the socket into listening mode ready to accept a connection
 
 while True: #Creates an infinite loop so the server is always ready to accept incoming connections
