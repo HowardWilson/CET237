@@ -1,6 +1,6 @@
 import socket
 s= socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((127.0.0.1,4))
+s.connect((socket.gethostname(),4))
 
 divide="x"
 username=input("Please enter your username:   ")
